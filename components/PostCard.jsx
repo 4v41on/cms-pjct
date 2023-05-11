@@ -7,7 +7,7 @@ const PostCard = ({post }) => {
   return (
     
   
-      <div className="bg-white shadow-lg rounded-lg  p-0 lg:p-8 pb-12 mb-8">
+      <div className="bg-gray-100 shadow-lg rounded-lg  p-0 lg:p-8 pb-12 mb-8">
         <h1 className='ease-in-out  cursor-pointer  duration-500 font-sans text-6xl hover:text-7xl font-extrabold tracking-tighter '>NEWS</h1>
 <div className="relative overflow-hidden shadow-md pb-80 mb-6">
     <img
@@ -47,7 +47,7 @@ const PostCard = ({post }) => {
   <div className='text-center'>
     <Link href={`/post/${post.slug}`}>
         <span className="transition duration-300 transform hover:-translate-y-1 inline-block bg-green-500 rounded-md p-3  font-extrabold uppercase font-['monument']">
-        continue reading 
+        seguir leyendo
         </span>
     </Link>
   </div>
