@@ -3,36 +3,39 @@ import { request, gql } from 'graphql-request';
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 export const getPosts = async () => {
-  const query = gql`
-    query MyQuery {
-      postsConnection {
-        edges {
-          cursor
-          node {
-            author {
-              bio
-              name
-              id
-              photo {
-                url
-              }
-            }
-            createdAt
-            slug
-            title
-            excerpt
-            featuredImage {
+const query = gql`
+  query MyQuery {
+    postsConnection(
+      orderBy: publishedAt_DESC
+      first: git 4
+      ) {
+      edges {
+        cursor
+        node {
+          author {
+            bio
+            name
+            id
+            photo {
               url
             }
-            categories {
-              name
-              slug
-            }
+          }
+          createdAt
+          slug
+          title
+          excerpt
+          featuredImage {
+            url
+          }
+          categories {
+            name
+            slug
           }
         }
       }
     }
-  `;
+  }
+`;
 
   const result = await request(graphqlAPI, query);
 
@@ -184,7 +187,7 @@ export const getCategoryPost = async (slug) => {
 export const getFeaturedPosts = async () => {
   const query = gql`
     query GetCategoryPost() {
-      posts(where: {featuredPost: true}) {
+      posts(where: {featuredPost: true}, orderBy: createdAt_DESC) {
         author {
           name
           photo {
@@ -238,7 +241,7 @@ export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
       posts(
-        orderBy: createdAt_ASC
+        orderBy: publishedAt_DESC
         last: 3
       ) {
         title
