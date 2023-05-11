@@ -7,7 +7,7 @@ const query = gql`
   query MyQuery {
     postsConnection(
       orderBy: publishedAt_DESC
-      first: git 4
+      first: git 6
       ) {
       edges {
         cursor
