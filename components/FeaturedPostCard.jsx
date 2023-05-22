@@ -14,7 +14,7 @@ const FeaturedPostCard = ({ post }) => (
      <div className="flex flex-col items-center absolute bottom-5 w-full justify-center">
      <p className='text-white ease-in-out duration-300 group/edit opacity-0 group-hover/item:opacity-100 font-["monument"] '>VIEW NOW</p>
     
-        <p className="inline align-middle uppercase font-sans  text-white text-shadow ml-2 font-medium">{post.title}</p>
+        <p className="inline align-middle uppercase font-sans  text-white text-shadow ml-2 text-xs">{post.title}</p>
         <p className="text-white align.  mb-4 text-shadow font-semibold text-xs">{moment(post.createdAt).format('MMM DD, YY')}</p>
       </div>
 

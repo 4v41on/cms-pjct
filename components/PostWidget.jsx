@@ -18,13 +18,13 @@ const PostWidget = ({ categories, slug}) => {
 
   console.log(relatedPosts)
   return (
-    <div className='border border-green-500 text-white shadow-lg rounded-lg p-8 mb-8'>
+    <div className=' text-white shadow-lg rounded-lg p-8 mb-8'>
       <h3 className='text-xl mb-8 font-semibold'>
         {slug ? 'Related Posts' : "Recent Posts"}
       </h3>
       {relatedPosts.map((post) =>(
         <div key={post.title} className='flex items-center w-full mb-4'>
-<div className='w-16 flex.none'>
+<div className='w-16 flex-none'>
   <img
   alt={post.title}
   height="60px"
@@ -36,7 +36,7 @@ const PostWidget = ({ categories, slug}) => {
 <div className='flex-grow ml-4 '>
 <p>
 
-  {moment(post.createdAt).format('MM D, YY')}
+  {moment(post.createdAt).format('MM/D, YY')}
 
 </p>
 <h1 className="font-sans font-extrabold uppercase"> 

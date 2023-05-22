@@ -17,7 +17,7 @@ function Categories() {
     </h3>
     {categories.map((category)=>(
 
-      <Link key={category.slug} href={`/category/${category}.slug`}>
+      <Link key={category.slug} href={`/category/${category.slug}`}>
       <span className="ease-[cubic-bezier(.09,-0.46,.82,1.65)] duration-300 hover:text-5xl hover:text-green-500 cursor-pointer block pb-4 mb-4 text-left text-6xl uppercase font-bold font-['monument'] leading-10 ">
            {category.name}
       </span>
