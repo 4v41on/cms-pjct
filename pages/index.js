@@ -11,7 +11,7 @@ export default function Home({ posts }) {
       className="container mx-auto px-10 mb-8 "
     >
       <Head>
-        <title>Hola neo</title>
+        <title>HERMES//BLOG</title>
       </Head>
       <FeaturedPosts/>
 
